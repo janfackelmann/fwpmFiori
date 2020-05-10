@@ -1,0 +1,171 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.team3.controller.Page1" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:layout1="sap.ui.commons.layout">
+    <Page showHeader="false" title="Page Title" showFooter="false" showNavButton="false" enableScrolling="false">
+        <content>
+            <layout1:AbsoluteLayout horizontalScrolling="Hidden" verticalScrolling="Auto">
+                <layout1:positions>
+                    <layout1:PositionContainer left="0px" top="0px">
+                        <layout1:control>
+                            <List mode="SingleSelectMaster" width="313px" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true">
+                                <infoToolbar>
+                                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                                        <content>
+                                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </content>
+                                    </Toolbar>
+                                </infoToolbar>
+                                <headerToolbar>
+                                    <Toolbar enabled="true" visible="true" width="" design="Solid">
+                                        <content>
+                                            <SearchField placeholder="Search" showSearchButton="true" visible="true" width="100%"/>
+                                        </content>
+                                    </Toolbar>
+                                </headerToolbar>
+                                
+                                <items>
+                                	
+                                    <ObjectListItem press=".onShow" title="Bestellung 21488" number="3432,59" numberUnit="EUR" numberState="None" type="Active" selected="true" showMarkers="false">
+                                    	
+                                        <attributes>
+                                            <ObjectAttribute text="Menge" active="false" visible="true"/>
+                                            <ObjectAttribute text="Mengeneinheit" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="1000" state="None" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus>
+                                            <ObjectStatus text="KG" state="None" visible="true"/>
+                                        </secondStatus>
+                                    </ObjectListItem>
+                                    <ObjectListItem intro="" title="Bestellung 1478" number="1423,59" numberUnit="EUR" numberState="None" type="Active" selected="true" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="Menge" active="false" visible="true"/>
+                                            <ObjectAttribute text="Mengeneinheit" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="1000" state="None" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus>
+                                            <ObjectStatus text="ML" state="None" visible="true"/>
+                                        </secondStatus>
+                                    </ObjectListItem>
+                                    <ObjectListItem intro="" title="Bestellung 487" number="405,20" numberUnit="EUR" numberState="None" type="Active" selected="true" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="Menge" active="false" visible="true"/>
+                                            <ObjectAttribute text="Mengeneinheit" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="50" state="None" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus>
+                                            <ObjectStatus text="KG" state="None" visible="true"/>
+                                        </secondStatus>
+                                    </ObjectListItem>
+                                    <ObjectListItem intro="" title="Bestellung 1440" number="50,40" numberUnit="EUR" numberState="None" type="Active" selected="true" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="Menge" active="false" visible="true"/>
+                                            <ObjectAttribute text="Mengeneinheit" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="15" state="None" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus>
+                                            <ObjectStatus text="KG" state="None" visible="true"/>
+                                        </secondStatus>
+                                    </ObjectListItem>
+                                    <ObjectListItem intro="" title="Bestellung 2405" number="187,44" numberUnit="EUR" numberState="None" type="Active" selected="true" showMarkers="false">
+                                        <attributes>
+                                            <ObjectAttribute text="Menge" active="false" visible="true"/>
+                                            <ObjectAttribute text="Mengeneinheit" active="false" visible="true"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus text="40" state="None" visible="true"/>
+                                        </firstStatus>
+                                        <secondStatus>
+                                            <ObjectStatus text="KG" state="None" visible="true"/>
+                                        </secondStatus>
+                                    </ObjectListItem>
+                                </items>
+                            </List>
+                        </layout1:control>
+                    </layout1:PositionContainer>
+                    <layout1:PositionContainer left="1048px" top="932px">
+                        <layout1:control>
+                            <Button press=".onShow" text="Ablehnen" type="Reject" iconFirst="true" width="100px" enabled="true" visible="true" tooltip="" iconDensityAware="false"/>
+                        </layout1:control>
+                    </layout1:PositionContainer>
+                    <layout1:PositionContainer left="1163px" top="932px">
+                        <layout1:control>
+                            <Button text="Annehmen" type="Accept" iconFirst="true" width="100px" enabled="true" visible="true" iconDensityAware="false"/>
+                        </layout1:control>
+                    </layout1:PositionContainer>
+                    <layout1:PositionContainer left="0px" top="932px">
+                        <layout1:control>
+                            <Button text="Abbrechen" type="Back" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                        </layout1:control>
+                    </layout1:PositionContainer>
+                    <layout1:PositionContainer left="312px" top="213px">
+                        <layout1:control>
+                            <Tree id="sap_m_Page_0-content-sap_m_Tree-1588856454038" mode="None" width="950px" headerText="Positionsübersicht" showSeparators="All" visible="true" items="{path:'hierarchicalModel>/static/sap_m_Page_0-content-sap_m_Tree-1588856454038'}">
+                                <items>
+                                    <StandardTreeItem title="{hierarchicalModel>name}" type="Active" visible="true" counter="{hierarchicalModel>null}"/>
+                                </items>
+                            </Tree>
+                        </layout1:control>
+                    </layout1:PositionContainer>
+                    <layout1:PositionContainer left="312px" top="72px">
+                        <layout1:control>
+                            <List mode="None" width="959px" headerText="" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true">
+                                <infoToolbar>
+                                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                                        <content>
+                                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </content>
+                                    </Toolbar>
+                                </infoToolbar>
+                                <headerToolbar>
+                                    <Toolbar enabled="true" visible="false" width="" design="Solid">
+                                        <content>
+                                            <SearchField placeholder="Search" showSearchButton="true" visible="true" width="100%"/>
+                                        </content>
+                                    </Toolbar>
+                                </headerToolbar>
+                                <items>
+                                    <DisplayListItem label="Lieferant" value="Erdnuss AG" visible="true" type="Navigation" selected="false"/>
+                                    <DisplayListItem label="Lieferkonditionen" value="frei Haus" visible="true" type="Navigation" selected="false"/>
+                                    <DisplayListItem label="Skontofrist" value="07.05.2020" visible="true" type="Navigation" selected="false"/>
+                                </items>
+                            </List>
+                        </layout1:control>
+                    </layout1:PositionContainer>
+                    <layout1:PositionContainer left="312px" top="0px">
+                        <layout1:control>
+                            <layout:VerticalLayout width="968px" visible="true">
+                                <layout:content>
+                                    <ObjectListItem intro="" title="Bestellung 8488" icon="sap-icon://cart-approval" number="4342,59" numberUnit="EUR" numberState="None" type="Active" selected="false" showMarkers="false">
+                                        <attributes/>
+                                        <firstStatus/>
+                                        <secondStatus/>
+                                    </ObjectListItem>
+                                </layout:content>
+                            </layout:VerticalLayout>
+                        </layout1:control>
+                    </layout1:PositionContainer>
+                </layout1:positions>
+            </layout1:AbsoluteLayout>
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content>
+                    <ToolbarSpacer width=""/>
+                    
+
+                    <Button text="Save" type="Emphasized" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                    <Button text="Cancel" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                </content>
+            </OverflowToolbar>
+        </footer>
+        <headerContent/>
+        <subHeader/>
+        <customHeader/>
+    </Page>
+</mvc:View>
