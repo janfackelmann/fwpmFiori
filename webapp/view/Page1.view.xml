@@ -5,7 +5,8 @@
                 <layout1:positions>
                     <layout1:PositionContainer left="0px" top="0px">
                         <layout1:control>
-                            <List mode="SingleSelectMaster" width="313px" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true">
+                        	
+                            <List mode="SingleSelectMaster" items="{/PurchaseOrderSet}" width="313px" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true">
                                 <infoToolbar>
                                     <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
                                         <content>
@@ -21,9 +22,10 @@
                                     </Toolbar>
                                 </headerToolbar>
                                 
+                                
                                 <items>
                                 	
-                                    <ObjectListItem press=".onShow" title="Bestellung 21488" number="3432,59" numberUnit="EUR" numberState="None" type="Active" selected="true" showMarkers="false">
+                                    <ObjectListItem intro="" title="{PoNumber}" number="{NetValue}" numberUnit="EUR" numberState="None" type="Active" selected="true" showMarkers="false">
                                     	
                                         <attributes>
                                             <ObjectAttribute text="Menge" active="false" visible="true"/>
@@ -36,54 +38,9 @@
                                             <ObjectStatus text="KG" state="None" visible="true"/>
                                         </secondStatus>
                                     </ObjectListItem>
-                                    <ObjectListItem intro="" title="Bestellung 1478" number="1423,59" numberUnit="EUR" numberState="None" type="Active" selected="true" showMarkers="false">
-                                        <attributes>
-                                            <ObjectAttribute text="Menge" active="false" visible="true"/>
-                                            <ObjectAttribute text="Mengeneinheit" active="false" visible="true"/>
-                                        </attributes>
-                                        <firstStatus>
-                                            <ObjectStatus text="1000" state="None" visible="true"/>
-                                        </firstStatus>
-                                        <secondStatus>
-                                            <ObjectStatus text="ML" state="None" visible="true"/>
-                                        </secondStatus>
-                                    </ObjectListItem>
-                                    <ObjectListItem intro="" title="Bestellung 487" number="405,20" numberUnit="EUR" numberState="None" type="Active" selected="true" showMarkers="false">
-                                        <attributes>
-                                            <ObjectAttribute text="Menge" active="false" visible="true"/>
-                                            <ObjectAttribute text="Mengeneinheit" active="false" visible="true"/>
-                                        </attributes>
-                                        <firstStatus>
-                                            <ObjectStatus text="50" state="None" visible="true"/>
-                                        </firstStatus>
-                                        <secondStatus>
-                                            <ObjectStatus text="KG" state="None" visible="true"/>
-                                        </secondStatus>
-                                    </ObjectListItem>
-                                    <ObjectListItem intro="" title="Bestellung 1440" number="50,40" numberUnit="EUR" numberState="None" type="Active" selected="true" showMarkers="false">
-                                        <attributes>
-                                            <ObjectAttribute text="Menge" active="false" visible="true"/>
-                                            <ObjectAttribute text="Mengeneinheit" active="false" visible="true"/>
-                                        </attributes>
-                                        <firstStatus>
-                                            <ObjectStatus text="15" state="None" visible="true"/>
-                                        </firstStatus>
-                                        <secondStatus>
-                                            <ObjectStatus text="KG" state="None" visible="true"/>
-                                        </secondStatus>
-                                    </ObjectListItem>
-                                    <ObjectListItem intro="" title="Bestellung 2405" number="187,44" numberUnit="EUR" numberState="None" type="Active" selected="true" showMarkers="false">
-                                        <attributes>
-                                            <ObjectAttribute text="Menge" active="false" visible="true"/>
-                                            <ObjectAttribute text="Mengeneinheit" active="false" visible="true"/>
-                                        </attributes>
-                                        <firstStatus>
-                                            <ObjectStatus text="40" state="None" visible="true"/>
-                                        </firstStatus>
-                                        <secondStatus>
-                                            <ObjectStatus text="KG" state="None" visible="true"/>
-                                        </secondStatus>
-                                    </ObjectListItem>
+                                    
+                                    
+                                    
                                 </items>
                             </List>
                         </layout1:control>
