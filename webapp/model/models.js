@@ -1,7 +1,7 @@
 sap.ui.define([
 		"sap/ui/model/json/JSONModel",
-		"sap/ui/Device",
-		"/sap/opu/odata/sap/ZOSO_PURCHASE_ORDER_SRV/"
+		"sap/ui/Device"
+	
 	], function (JSONModel, Device) {
 		"use strict";
 
