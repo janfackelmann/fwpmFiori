@@ -55,6 +55,35 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			this.oRouter.getTarget("Page1").attachDisplay(jQuery.proxy(this.handleRouteMatched, this));
 			this.getView().setModel(new sap.ui.model.json.JSONModel("/webapp/data/hierarchicalJSONData.json"), "hierarchicalModel");
-		}
+		},
+		
+		//TODO onClose -> Wenn auf Ja/Nein gedrückt 
+		BttnAnnehmenPress : function(){
+			MessageBox.show("Wollen Sie diesen Auftrag wirklich Annehmen?", {
+				icon: MessageBox.Icon.QUESTION,
+				actions: [MessageBox.Action.YES, MessageBox.Action.NO],
+				onClose: function (){
+					
+				}
+			}
+			);
+		},
+		
+		//TODO onClose -> Wenn auf Ja/Nein gedrückt 
+		BttnAblehnenPress : function(){
+			MessageBox.show("Wollen Sie diesen Auftrag wirklich Ablehnen?", {
+				icon: MessageBox.Icon.QUESTION,
+				actions: [MessageBox.Action.YES, MessageBox.Action.NO],
+				onClose: function (){
+					
+				}
+			}
+			);
+		},
+		
+		//TODO OnPress -> Werte müssen aus dem Mittleren Bereich verschwinden
+		BttnAbbrechenPress : function(){
+		
+		}	
 	});
 }, /* bExport= */ true);

@@ -1,12 +1,11 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.team3.controller.Page1" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:layout1="sap.ui.commons.layout">
-    <Page showHeader="false" title="Page Title" showFooter="false" showNavButton="false" enableScrolling="false">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:layout1="sap.ui.commons.layout" controllerName="com.sap.build.standard.team3.controller.Page1"><Page showHeader="false" title="Page Title" showFooter="false" showNavButton="false" enableScrolling="false">
         <content>
             <layout1:AbsoluteLayout horizontalScrolling="Hidden" verticalScrolling="Auto">
                 <layout1:positions>
                     <layout1:PositionContainer left="0px" top="0px">
                         <layout1:control>
                         	
-                            <List mode="SingleSelectMaster" items="{/PurchaseOrderSet}" width="313px" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true">
+                            <List mode="SingleSelectMaster" items="{/PurchaseOrderSet}" width="313px" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="7" growingScrollToLoad="true" visible="true">
                                 <infoToolbar>
                                     <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
                                         <content>
@@ -25,7 +24,7 @@
                                 
                                 <items>
                                 	
-                                    <ObjectListItem intro="" title="{PoNumber}" number="{NetValue}" numberUnit="EUR" numberState="None" type="Active" selected="true" showMarkers="false">
+                                    <ObjectListItem intro="" title="{PoNumber}" number="{NetValue}" numberUnit="EUR" numberState="None" type="Active" showMarkers="false" markFlagged="true">
                                     	
                                         <attributes>
                                             <ObjectAttribute text="Menge" active="false" visible="true"/>
@@ -47,20 +46,20 @@
                     </layout1:PositionContainer>
                     <layout1:PositionContainer left="1048px" top="932px">
                         <layout1:control>
-                            <Button press=".onShow" text="Ablehnen" type="Reject" iconFirst="true" width="100px" enabled="true" visible="true" tooltip="" iconDensityAware="false"/>
+                            <Button press="BttnAblehnenPress" text="Ablehnen" type="Reject" iconFirst="true" width="100px" enabled="true" visible="true" tooltip="" iconDensityAware="false"/>
                         </layout1:control>
                     </layout1:PositionContainer>
                     <layout1:PositionContainer left="1163px" top="932px">
                         <layout1:control>
-                            <Button text="Annehmen" type="Accept" iconFirst="true" width="100px" enabled="true" visible="true" iconDensityAware="false"/>
+                            <Button text="Annehmen" type="Accept" iconFirst="true" width="100px" enabled="true" visible="true" iconDensityAware="false" press="BttnAnnehmenPress"/>
                         </layout1:control>
                     </layout1:PositionContainer>
-                    <layout1:PositionContainer left="0px" top="932px">
+                    <layout1:PositionContainer left="312px" top="932px">
                         <layout1:control>
                             <Button text="Abbrechen" type="Back" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
                         </layout1:control>
                     </layout1:PositionContainer>
-                    <layout1:PositionContainer left="312px" top="213px">
+                    <layout1:PositionContainer left="312px" top="175px">
                         <layout1:control>
                             <Tree id="sap_m_Page_0-content-sap_m_Tree-1588856454038" mode="None" width="950px" headerText="Positionsübersicht" showSeparators="All" visible="true" items="{path:'hierarchicalModel>/static/sap_m_Page_0-content-sap_m_Tree-1588856454038'}">
                                 <items>
@@ -69,7 +68,7 @@
                             </Tree>
                         </layout1:control>
                     </layout1:PositionContainer>
-                    <layout1:PositionContainer left="312px" top="72px">
+                    <layout1:PositionContainer left="312px" top="80px">
                         <layout1:control>
                             <List mode="None" width="959px" headerText="" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true">
                                 <infoToolbar>
