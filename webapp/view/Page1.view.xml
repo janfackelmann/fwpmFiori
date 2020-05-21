@@ -5,7 +5,7 @@
                     <layout1:PositionContainer left="0px" top="0px">
                         <layout1:control>
                         	
-                            <List mode="SingleSelectMaster" items="{/PurchaseOrderSet}" width="313px" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="7" growingScrollToLoad="true" visible="true">
+                            <List id="OrderList" mode="SingleSelectMaster" items="{/PurchaseOrderSet}" width="313px" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="7" growingScrollToLoad="true" visible="true" select="selectListItem" updateFinished="oufOrderList">
                                 <infoToolbar>
                                     <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
                                         <content>
@@ -97,7 +97,7 @@
                         <layout1:control>
                             <layout:VerticalLayout width="968px" visible="true">
                                 <layout:content>
-                                    <ObjectListItem intro="" title="Bestellung 8488" icon="sap-icon://cart-approval" number="4342,59" numberUnit="EUR" numberState="None" type="Active" selected="false" showMarkers="false">
+                                    <ObjectListItem id="BestellKopf" intro="" title="" icon="sap-icon://cart-approval" number="4342,59" numberUnit="EUR" numberState="None" type="Active" selected="false" showMarkers="false">
                                         <attributes/>
                                         <firstStatus/>
                                         <secondStatus/>
