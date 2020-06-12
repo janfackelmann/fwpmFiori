@@ -71,7 +71,7 @@
 				"type": "sap.ui.model.odata.v2.ODataModel",
 				"settings": {
 					"defaultOperationMode": "Server",
-					"defaultBindingMode": "TwoWay",
+					"defaultBindingMode": "OneWay",
 					"defaultCountMode": "Request"
 				},
 				"dataSource": "ZOSO_PURCHASE_ORDER_SRV",
@@ -90,9 +90,7 @@
 				"clearTarget": false,
 				"controlAggregation": "pages",
 				"bypassed": {
-					"target": [
-						"Page1"
-					]
+					"target": ["Page1"]
 				}
 			},
 			"targets": {
@@ -104,22 +102,15 @@
 					"transition": "slide"
 				}
 			},
-			"routes": [
-				{
-					"pattern": "Page1/:context:",
-					"name": "Page1",
-					"target": [
-						"Page1"
-					]
-				},
-				{
-					"pattern": "",
-					"name": "default",
-					"target": [
-						"Page1"
-					]
-				}
-			]
+			"routes": [{
+				"pattern": "Page1/:context:",
+				"name": "Page1",
+				"target": ["Page1"]
+			}, {
+				"pattern": "",
+				"name": "default",
+				"target": ["Page1"]
+			}]
 		}
 	}
 }
