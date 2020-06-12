@@ -3,9 +3,9 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 	"./utilities",
 	"sap/ui/core/routing/History",
 	"sap/ui/model/json/JSONModel",
-	"sap/m/MessageToast"
-	
-	
+	"sap/m/MessageToast",
+	"sap/m/ListBase"
+
 ], function(BaseController, MessageBox, Utilities, History, JSONModel, MessageToast) {
 	"use strict";
 
@@ -55,6 +55,46 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			this.oRouter.getTarget("Page1").attachDisplay(jQuery.proxy(this.handleRouteMatched, this));
 			this.getView().setModel(new sap.ui.model.json.JSONModel("/webapp/data/hierarchicalJSONData.json"), "hierarchicalModel");
+		},
+		
+		//EVENT: Nach Laden der Liste wird das erste Item selektiert
+		oufOrderList : function(){
+			var oList = this.getView().byId("OrderList");
+			var aItems = oList.getItems();
+
+			oList.setSelectedItem(aItems[0]);
+
+			this.selectListItem();
+		},
+		
+		//EVENT: Klicken von ListItem füllt Werte auf der Rechten Seite
+		//TODO: selectedItem wird 2 mal benutzt... globable Variable? 1. Eintrag wird nicht gefüllt
+		selectListItem : function(oEvent){
+			var BestellKopf = this.getView().byId("BestellKopf");
+			
+			var selectedItem= oEvent.getSource().getSelectedItem();
+			
+		BestellKopf.setTitle(selectedItem.getTitle());
+		
+		var lieferantZeile = this.getView().byId("Kopf2");
+		var itemKey = oEvent.getSource().getSelectedItem().getTitle();
+		 var sPath = "/PurchaseOrderSet" + "('" + itemKey +"')";
+			lieferantZeile.bindElement({path:sPath});
+		
+		var posList = this.getView().byId("posList");
+		var oItemTemplate = posList.getBindingInfo("items").template;
+		var oFilter = new sap.ui.model.Filter({
+			path: "PoNumber",
+			operator: sap.ui.model.FilterOperator.EQ,
+			value1: itemKey});
+		var oFilters=[oFilter];
+		var bindingInf = {
+			path: "/POItemSet",
+			template: oItemTemplate,
+			filters: oFilters
+		};
+		
+		posList.bindAggregation("items", bindingInf);
 		},
 		
 		//TODO onClose -> Wenn auf Ja/Nein gedrückt 
